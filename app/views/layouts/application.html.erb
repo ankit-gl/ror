@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Library</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body id = "library">
+      <% flash.each do |key, value| %>
+         <div class="flash <%= key %>"><%= value %></div>
+      <% end %>
+      <div id = "container">
+         
+         <div id = "header">
+            <h1>Library Info System</h1>
+            <h3>Library powered by Ruby on Rails</h3>
+              <% if @is_user_logged_in %>
+                  <%= button_to 'Logout', logout_path, method: :delete %>
+              <% end %>
+         </div>
+
+         <div id = "content">
+            <%= yield -%>
+         </div>
+
+         <div id = "sidebar"></div>
+         
+      </div>
+   </body>
+</html>
