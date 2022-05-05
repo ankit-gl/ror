@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a poc of library management system to help me understand ror.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* It supports user authentication, login, session, signup, logout.
+* It uses postgres db
+* All Basic crud operation suported like add, edit, delete book
+* Seperate routes for loggedin and logged out users.
